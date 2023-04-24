@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      // ...
+      {
+        "name": "Launch npx vite",
+        "command": "npx vite",
+        "request": "launch",
+        "type": "node-terminal"
+      }
+    ]
+  }
