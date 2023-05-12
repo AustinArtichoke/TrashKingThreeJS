@@ -154,9 +154,11 @@ function animate() {
 	model.position.z+=zspeed;
 
 	if (perched) {
+		//if set to perched, move up in space to "hop"
 		modelB.position.set (2, 6.1, 14.3);
 	}
 	else { 
+		//if it is not perched, then set back to starting position
 		modelB.position.set (2,5.8,14.3);
 	}
 
@@ -164,6 +166,8 @@ function animate() {
 	renderer.render( scene, camera );
 }
 
+
+//functions for delaying the switch between hop and perch
 function hop(){
 	perched=true;
 	window.setTimeout(perch, 100);
@@ -171,6 +175,7 @@ function hop(){
 
 function perch(){
 	perched=false;
+	//times how long we wait before hopping again - set to random
 	window.setTimeout(hop, randFloat(100,2000));
 }
 
